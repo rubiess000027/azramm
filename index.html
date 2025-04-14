@@ -5,12 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SENİ SEVİYORRUMM MAVİSSSİMMMM</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .heart {
+            width: 100px;
+            height: 90px;
+            position: relative;
+            margin: 40px auto 0;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 2s ease-in-out;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 90px;
+            background: red;
+            border-radius: 50px 50px 0 0;
+            top: 0;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 50px;
+        }
+
+        .show-heart {
+            opacity: 1;
+            transform: scale(1);
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h1 id="main-text"></h1>
         <p class="subtext">Bu gözler senden başkasına körrrr.</p>
-        <div class="heart" id="heart"></div> <!-- Kalp buraya eklendi -->
+        <div class="heart" id="heart"></div>
     </div>
     <script src="script.js"></script>
 </body>
